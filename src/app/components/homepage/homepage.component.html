@@ -11,10 +11,10 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let item of assets" size="6">
-       <ion-card button [routerLink]="['/detail', item.id]" >
+       <ion-card button [routerLink]="['/detail', item.id, item.name]" >
         <img [src]="assetService.getAssetImage(item.type)" height="200px" width="100%" [alt]="item.name"/>
         <ion-card-header>
-          <ion-card-title>{{item.name}}</ion-card-title>
+          <ion-card-title class="font-sm">{{item.name}}</ion-card-title>
           <ion-card-subtitle>{{assetService.assetCount(item.type)}} - Item(s)</ion-card-subtitle>
         </ion-card-header>
        </ion-card>

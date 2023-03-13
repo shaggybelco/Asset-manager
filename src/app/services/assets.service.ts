@@ -116,7 +116,7 @@ export class AssetsService {
     }
   ];
 
-   assetImages: any = {
+  assetImages: any = {
     car: '../../assets/auto_car-16.jpg',
     truck: '../../assets/vecteezy_vector-sign-truck-symbol-is-isolated-on-a-white-background_15842969.jpg',
     generator: '../../assets/vecteezy_energy-solar-sun-plug-turquoise-highlight-circle-point_14872672.jpg',
@@ -125,23 +125,33 @@ export class AssetsService {
 
 
   private assets: Asset[] = [
-    {id: 1, name: 'Cars', type: 'car', count: 2, img: '../../assets/auto_car-16.jpg' },
-    {id: 2, name: 'Trucks', type: 'truck', count: 3, img: '../../assets/vecteezy_vector-sign-truck-symbol-is-isolated-on-a-white-background_15842969.jpg' },
-    {id: 3, name: 'Generators', type: 'generator', count: 1, img: '../../assets/vecteezy_energy-solar-sun-plug-turquoise-highlight-circle-point_14872672.jpg' },
-    {id: 4, name: 'Fridges', type: 'fridge', count: 3, img: '../../assets/Electronic_Devices_(6).jpg' }
+    { id: 1, name: 'Cars', type: 'car', count: 2, img: '../../assets/auto_car-16.jpg' },
+    { id: 2, name: 'Trucks', type: 'truck', count: 3, img: '../../assets/vecteezy_vector-sign-truck-symbol-is-isolated-on-a-white-background_15842969.jpg' },
+    { id: 3, name: 'Generators', type: 'generator', count: 1, img: '../../assets/vecteezy_energy-solar-sun-plug-turquoise-highlight-circle-point_14872672.jpg' },
+    { id: 4, name: 'Fridges', type: 'fridge', count: 3, img: '../../assets/Electronic_Devices_(6).jpg' }
   ];
 
   getAssetImage(type: any) {
     return this.assetImages[type];
   }
 
-  assetCount(type: any){
+  getAssetById(id: any): any {
+    console.log(id)
+    const asset = this.assets.find(asset => asset.id === parseInt(id));
+    return asset;
+  }
+
+  getByType(type: any) {
+    return this.asset.filter(ast => ast.type === type);
+  }
+
+  assetCount(type: any) {
     return this.assetCounts[type];
   }
 
 
 
-  getAssets(): any[]{
+  getAssets(): any[] {
     return this.assets;
   }
 
@@ -166,6 +176,6 @@ export class AssetsService {
     }
     return counts;
   }, {});
-  
-  
+
+
 }
