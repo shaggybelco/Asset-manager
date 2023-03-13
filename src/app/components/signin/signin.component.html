@@ -2,6 +2,40 @@
 
 </ion-header>
 
-<ion-content>
-  
+<ion-content class="ion-padding center">
+
+  <div class="center" style="padding: 10px">
+    <img alt="Silhouette of mountains" width="100%" src="../../../assets/login.svg" />
+    <div class="mt">
+      <div>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="at-outline"></ion-icon>
+          <ion-input placeholder="Username"></ion-input>
+        </ion-item>
+      </div>
+      <div>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          <ion-input placeholder="Password"></ion-input>
+          <ion-note slot="end">Forgot</ion-note>
+        </ion-item>
+      </div>
+      <div class="mt">
+        <ion-button expand="block" routerLink="/home">
+          Login
+        </ion-button>
+      </div>
+
+      <div class="text-center">
+        <h5>OR</h5>
+      </div>
+
+      <div class="mt">
+        <ion-button expand="block">
+          Register
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
 </ion-content>
