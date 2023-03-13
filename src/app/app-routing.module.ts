@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DetailsComponent } from './components/details/details.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { SigninComponent } from './components/signin/signin.component';
 
@@ -15,6 +16,9 @@ const routes: Routes = [
   },{
     path: 'home',
     component: HomepageComponent
+  },{
+    path: 'detail/:id',
+    component: DetailsComponent
   }
 ];
 

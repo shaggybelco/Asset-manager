@@ -11,10 +11,11 @@ export class HomepageComponent  implements OnInit {
 
   assets!: Asset[];
 
-  constructor(private assetService: AssetsService) {}
+  constructor(public assetService: AssetsService) {}
 
   ngOnInit() {
     this.assets = this.assetService.getAssets();
+    console.log(this.assetService.assetCounts)
   }
 
 }
