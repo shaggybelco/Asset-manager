@@ -20,6 +20,8 @@ export class AssetsService {
       fuelLevel: 75,
       latitude: -33.8688,
       longitude: 151.2093,
+      speed: 100,
+      numberPlate: 'XLY 203 GP',
       type: 'car'
     },
     {
@@ -32,6 +34,8 @@ export class AssetsService {
       fuelLevel: 50,
       latitude: -33.8656,
       longitude: 151.2071,
+      speed: 140,
+      numberPlate: 'XLY 203 GP',
       type: 'car'
     },
     {
@@ -44,6 +48,9 @@ export class AssetsService {
       fuelLevel: 25,
       latitude: -33.8705,
       longitude: 151.2067,
+      state: 'wait',
+      timeWait: '2023-03-14T12:14:00.000Z',
+      numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
     {
@@ -56,6 +63,9 @@ export class AssetsService {
       fuelLevel: 60,
       latitude: -33.8697,
       longitude: 151.2085,
+      state: 'wait',
+      timeWait: '2023-03-14T12:14:00.000Z',
+      numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
     {
@@ -68,6 +78,9 @@ export class AssetsService {
       fuelLevel: 100,
       latitude: -33.8690,
       longitude: 151.2104,
+      state: 'wait',
+      timeWait: '2023-03-14T07:14:00.000Z',
+      numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
     {
@@ -109,7 +122,7 @@ export class AssetsService {
       make: 'Whirlpool',
       model: 'WRS588FIHZ',
       year: 2018,
-      temperature: 8,
+      temperature: 11,
       latitude: -33.8728,
       longitude: 151.2076,
       type: 'fridge'
@@ -136,7 +149,6 @@ export class AssetsService {
   }
 
   getAssetById(id: any): any {
-    console.log(id)
     const asset = this.assets.find(asset => asset.id === parseInt(id));
     return asset;
   }

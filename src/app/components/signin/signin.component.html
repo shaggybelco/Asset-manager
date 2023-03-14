@@ -1,23 +1,20 @@
-<ion-header>
-
-</ion-header>
-
-<ion-content class="ion-padding center">
+<ion-content [fullscreen]="true" class="ion-padding ">
 
   <div class="center" style="padding: 10px">
     <img alt="Silhouette of mountains" width="100%" src="../../../assets/login.svg" />
+    <h1 class="font-weight">Login</h1>
     <div class="mt">
-      <div>
+      <div class="border">
         <ion-item lines="none">
           <ion-icon slot="start" name="at-outline"></ion-icon>
           <ion-input placeholder="Username"></ion-input>
         </ion-item>
       </div>
-      <div>
+      <div class="border">
         <ion-item lines="none">
           <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
-          <ion-input placeholder="Password"></ion-input>
-          <ion-note slot="end">Forgot</ion-note>
+          <ion-input placeholder="Password" type="password"></ion-input>
+          <ion-note slot="end" color="primary">Forgot</ion-note>
         </ion-item>
       </div>
       <div class="mt">
@@ -26,14 +23,12 @@
         </ion-button>
       </div>
 
-      <div class="text-center">
+      <!-- <div class="text-center">
         <h5>OR</h5>
-      </div>
+      </div> -->
 
-      <div class="mt">
-        <ion-button expand="block">
-          Register
-        </ion-button>
+      <div class="mt text-center">
+       <ion-text>You are not registered then click <a>here</a></ion-text>
       </div>
     </div>
   </div>
