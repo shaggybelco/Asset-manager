@@ -130,10 +130,10 @@ export class AssetsService {
   ];
 
   assetImages: any = {
-    car: '../../assets/auto_car-16.jpg',
-    truck: '../../assets/vecteezy_vector-sign-truck-symbol-is-isolated-on-a-white-background_15842969.jpg',
-    generator: '../../assets/vecteezy_energy-solar-sun-plug-turquoise-highlight-circle-point_14872672.jpg',
-    fridge: '../../assets/Electronic_Devices_(6).jpg'
+    car: '../../assets/car.png',
+    truck: '../../assets/truck.png',
+    generator: '../../assets/electric-generator.png',
+    fridge: '../../assets/fridge.png'
   }
 
 

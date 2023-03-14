@@ -7,18 +7,18 @@
       <div class="border">
         <ion-item lines="none">
           <ion-icon slot="start" name="at-outline"></ion-icon>
-          <ion-input placeholder="Username"></ion-input>
+          <ion-input type="text" [(ngModel)]="username" placeholder="Username"></ion-input>
         </ion-item>
       </div>
       <div class="border">
         <ion-item lines="none">
           <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
-          <ion-input placeholder="Password" type="password"></ion-input>
-          <ion-note slot="end" color="primary">Forgot</ion-note>
+          <ion-input placeholder="Password" [(ngModel)]="password" type="password"></ion-input>
+          <ion-note slot="end" class="font-bold" color="tertiary">Forgot</ion-note>
         </ion-item>
       </div>
       <div class="mt">
-        <ion-button expand="block" routerLink="/home">
+        <ion-button expand="block" color="tertiary" (click)="login()">
           Login
         </ion-button>
       </div>
@@ -28,7 +28,7 @@
       </div> -->
 
       <div class="mt text-center">
-       <ion-text>You are not registered then click <a>here</a></ion-text>
+       <ion-text>New to Asset Manager?<a> Register</a></ion-text>
       </div>
     </div>
   </div>

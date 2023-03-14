@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class SigninComponent  implements OnInit {
 
 
-  constructor() {}
+  constructor(private auth: AuthService, private router: Router) {}
 
   ngOnInit() {
+  }
+
+  username: string = '';
+  password: string = '';
+
+  login(){
+    if(this.username && this.password){
+      const log = this.auth.login({username: this.username, password: this.password})
+      if(log){
+        console.log('log the user');
+        this.router.navigateByUrl('/home')
+      }
+    }
   }
 
 }

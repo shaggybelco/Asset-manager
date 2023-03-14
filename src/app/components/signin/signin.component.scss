@@ -18,13 +18,21 @@
 
 .border{
     ion-item{
-        --background: #3881ff29;
+        --background: #00df8a1c;
         border-radius: 10px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
 }
 
+a{
+    color: #00df89;
+}
+
 .font-weight{
     font-weight: 900;
+}
+
+.font-bold{
+    font-weight: 300;
 }

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +11,10 @@ export class AuthService {
     username: 'shaggy',
     pasword: '123456'
   }]
+
+  login(data: any):any{
+    return this.users.find(user => user.username.toLowerCase() === data.username.toLowerCase() && user.pasword === data.password)
+  }
 
  
 }

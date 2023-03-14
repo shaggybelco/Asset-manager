@@ -1,15 +1,39 @@
-.mt-1{
-    margin-top: 1rem;
+.mt-1 {
+  margin-top: 1rem;
 }
 
-.mb-1{
-    margin-bottom: 1rem;
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
-.font-sm{
-    font-size: medium;
+.font-sm {
+  font-size: medium;
 }
 
-.absolute{
-    position: absolute;
+.absolute {
+  position: absolute;
+}
+
+.font-w {
+  font-weight: 700;
+}
+
+.color {
+  border-radius: 10%;
+  // color: aqua;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.underline{
+    text-decoration: underline;
 }

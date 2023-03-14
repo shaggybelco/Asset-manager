@@ -1,10 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>Assets Manager</ion-title>
     <ion-buttons slot="end">
-      <ion-button color="primary" routerLink="/login"
-        >Logout<ion-icon slot="end" name="log-out-outline"></ion-icon
-      ></ion-button>
+      <ion-button routerLink="/login">Logout<ion-icon slot="end" name="log-out-outline"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,19 +11,14 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let item of assets" size="6">
-        <ion-card button (click)="selectedItem(item); setOpen(true)">
-          <img
-            [src]="assetService.getAssetImage(item.type)"
-            height="150px"
-            width="100%"
-            [alt]="item.name"
-          />
+        <ion-card button (click)="selectedItem(item); setOpen(true)" color="primary">
+          <div class="center mt-1">
+            <img [src]="assetService.getAssetImage(item.type)" width="80%" [alt]="item.name" />
+          </div>
           <ion-card-header>
             <ion-card-title class="font-sm">{{ item.name }}</ion-card-title>
-            <ion-card-subtitle
-              >{{ assetService.assetCount(item.type) }} -
-              Item(s)</ion-card-subtitle
-            >
+            <ion-card-subtitle>{{ assetService.assetCount(item.type) }} -
+              Item(s)</ion-card-subtitle>
           </ion-card-header>
         </ion-card>
       </ion-col>
@@ -35,12 +28,10 @@
 <ion-modal [isOpen]="isModalOpen">
   <ng-template>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="tertiary">
         <ion-title>{{ title }}</ion-title>
         <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)" color="secondary"
-            >Close</ion-button
-          >
+          <ion-button (click)="setOpen(false)">Close</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
@@ -53,82 +44,81 @@
                 <ion-card-title>Alerts</ion-card-title>
               </ion-card-header>
               <ion-card-content>
-                <div
-                  *ngFor="let item of alertMe; let i = index"
-                  style="padding-bottom: 10px"
-                >
+                <div *ngFor="let item of alertMe; let i = index" style="padding-bottom: 10px">
                   <ion-icon name="caret-forward-outline"></ion-icon>
                   {{ alertMe[i] }}
                 </div>
               </ion-card-content>
-              <ion-button
-                fill="clear"
-                color="secondary"
-                style="padding: 5px"
-                (click)="alertMe = []; isAlert = false"
-                >Dismiss</ion-button
-              >
+              <ion-button fill="clear" color="dark" style="padding: 5px"
+                (click)="alertMe = []; isAlert = false">Dismiss</ion-button>
             </ion-card>
           </ion-col>
         </ion-row>
       </ion-grid>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12" *ngFor="let item of holdAsseets">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>{{ item.make }}</ion-card-title>
-                <ion-card-subtitle>Nickname: {{ item.name }}</ion-card-subtitle>
-              </ion-card-header>
-              <ion-card-content>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.fuelLevel">
-                    Full level:
-                  </ion-text>
-                  <span>{{ item.fuelLevel }}</span>
-                </div>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.year">
-                    Year:
-                  </ion-text>
-                  <span>{{ item.year }}</span>
-                </div>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.model">
-                    Model:
-                  </ion-text>
-                  <span>{{ item.model }}</span>
-                </div>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.odometer">
-                    Odometer:
-                  </ion-text>
-                  <span>{{ item.odometer }}</span>
-                </div>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.temperature">
-                    Temperature:
-                  </ion-text>
-                  <span>{{ item.temperature }}</span>
-                </div>
 
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.status">
-                    Status:
-                  </ion-text>
-                  <span>{{ item.status }}</span>
-                </div>
-                <div>
-                  <ion-text class="font-bold" *ngIf="item.numberPlate">
-                    Number plate:
-                  </ion-text>
-                  <span>{{ item.numberPlate }}</span>
-                </div>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <div class="color">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="text-center">
+              <h4 class="font-w">Asset Details</h4>
+            </ion-col>
+            <ion-col size="12" *ngFor="let item of holdAsseets">
+
+              <ion-card color="primary">
+                <ion-card-header>
+                  <ion-card-title>{{ item.make }}</ion-card-title>
+                  <ion-card-subtitle>Nickname: {{ item.name }}</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.fuelLevel">
+                      Full level:
+                    </ion-text>
+                    <span>{{ item.fuelLevel }}</span>
+                  </div>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.year">
+                      Year:
+                    </ion-text>
+                    <span>{{ item.year }}</span>
+                  </div>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.model">
+                      Model:
+                    </ion-text>
+                    <span>{{ item.model }}</span>
+                  </div>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.odometer">
+                      Odometer:
+                    </ion-text>
+                    <span>{{ item.odometer }}</span>
+                  </div>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.temperature">
+                      Temperature:
+                    </ion-text>
+                    <span>{{ item.temperature }}</span>
+                  </div>
+
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.status">
+                      Status:
+                    </ion-text>
+                    <span>{{ item.status }}</span>
+                  </div>
+                  <div>
+                    <ion-text class="font-bold" *ngIf="item.numberPlate">
+                      Number plate:
+                    </ion-text>
+                    <span>{{ item.numberPlate }}</span>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
     </ion-content>
   </ng-template>
 </ion-modal>
