@@ -48,8 +48,8 @@ export class AssetsService {
       fuelLevel: 25,
       latitude: -33.8705,
       longitude: 151.2067,
-      state: 'wait',
-      timeWait: '2023-03-14T12:14:00.000Z',
+      status: 'waiting',
+      timeWait: '2023-03-15T08:00:00.000Z',
       numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
@@ -63,8 +63,8 @@ export class AssetsService {
       fuelLevel: 60,
       latitude: -33.8697,
       longitude: 151.2085,
-      state: 'wait',
-      timeWait: '2023-03-14T12:14:00.000Z',
+      status: 'waiting',
+      timeWait: '2023-03-15T08:00:00.000Z',
       numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
@@ -78,8 +78,8 @@ export class AssetsService {
       fuelLevel: 100,
       latitude: -33.8690,
       longitude: 151.2104,
-      state: 'wait',
-      timeWait: '2023-03-14T07:14:00.000Z',
+      status: 'waiting',
+      timeWait: '2023-03-15T08:00:00.000Z',
       numberPlate: 'XLY 203 GP',
       type: 'truck'
     },
