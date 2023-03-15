@@ -103,6 +103,7 @@ export class AssetsService {
       temperature: 5,
       latitude: -33.8744,
       longitude: 151.2075,
+      serialNumber: 'LKfdSvsje233',
       type: 'fridge'
     },
     {
@@ -114,6 +115,7 @@ export class AssetsService {
       temperature: 3,
       latitude: -33.8739,
       longitude: 151.2098,
+      serialNumber: 'LKfdS12323',
       type: 'fridge'
     },
     {
@@ -125,6 +127,7 @@ export class AssetsService {
       temperature: 11,
       latitude: -33.8728,
       longitude: 151.2076,
+      serialNumber: 'iofjei123&2kx',
       type: 'fridge'
     }
   ];

@@ -119,6 +119,12 @@
                     </ion-text>
                     <span>{{ item.latitude }}, {{item.longitude}}</span>
                   </div>
+                  <div *ngIf="item.type === 'fridge'">
+                    <ion-text class="font-bold">
+                      Serial number:
+                    </ion-text>
+                    <span>{{ item.serialNumber }}</span>
+                  </div>
                 </ion-card-content>
               </ion-card>
             </ion-col>
